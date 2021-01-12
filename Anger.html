@@ -18,7 +18,7 @@
     //Get webgl support
     let type = "WebGL";
     if (!PIXI.utils.isWebGLSupported()) {
-        type = "canvas"
+        type = "canvas";
     }
     PIXI.utils.sayHello(type);
 
@@ -368,7 +368,7 @@
         }
 
         update = setInterval(function(){
-            if (sliceCount==10 && firstClick) {
+            if (sliceCount==10 && chocolate.firstClick) {
                 clearInterval(update);
                 // pause interaction
                 chocolate.buttonMode = false;

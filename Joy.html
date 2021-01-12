@@ -12,7 +12,7 @@
     //Get webgl support
     let type = "WebGL";
     if(!PIXI.utils.isWebGLSupported()){
-        type = "canvas"
+        type = "canvas";
     }
     PIXI.utils.sayHello(type);
 
@@ -153,6 +153,8 @@
             }
 
             timer = setInterval(function(){
+                chocolate.buttonMode = false;
+                chocolate.interactive = false;
                 for (i=0; i<slices.length; i++) {
                     slices[i].y+=50;
                 }
@@ -177,6 +179,8 @@
                 chocolate.firstClick = false;
                 //draw end screen
                 setTimeout(function(){
+                    chocolate.buttonMode = false;
+                    chocolate.interactive = false;
                     //get image
 //                const image = app.renderer.plugins.extract.base64(app.stage);
                     //draw mask
